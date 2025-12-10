@@ -1,0 +1,64 @@
+# Caltech Longevity Club Landing Page
+
+## Project Structure
+The project uses Next.js 15 with TypeScript and is organized as follows:
+
+```
+/src
+  /app
+    /components
+      /sections        # Landing page sections
+      /ui             # Reusable UI components from shadcn
+    /lib
+      /utils.ts       # Utility functions
+    globals.css       # Global styles
+    layout.tsx        # Root layout
+    page.tsx          # Landing page
+  /public
+    /images          # Static images
+```
+
+## Tech Stack
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- Lucide icons
+
+## Design System
+Following the SOP's design language:
+- Dark theme with neon accents
+- Glassmorphism UI elements
+- Interactive animations
+- Typography:
+  - Primary Font: Inter (Clean, modern sans-serif)
+  - Monospace Font: JetBrains Mono (Technical, precise)
+- Scientific and precise typography
+- Biotech-inspired visuals
+
+## Typography Guidelines
+- Headers: Inter, bold weight
+- Body Text: Inter, regular weight
+- Code & Technical Terms: JetBrains Mono
+- Font Sizes:
+  - H1: 3.5rem (56px)
+  - H2: 2.5rem (40px)
+  - H3: 2rem (32px)
+  - Body: 1rem (16px)
+  - Small: 0.875rem (14px)
+
+## Sections
+1. Hero Section
+2. What We Do
+3. Who We're Looking For
+4. Interactive Timeline
+5. Get Involved
+6. Team Section
+
+## Implementation Notes
+- Using Next.js App Router
+- Tailwind CSS for styling
+- shadcn/ui for consistent UI components
+- Responsive design for all screen sizes
+- Performance optimized
+- SEO friendly 
