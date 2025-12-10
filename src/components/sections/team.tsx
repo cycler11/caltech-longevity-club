@@ -120,7 +120,7 @@ export function TeamSection() {
 
   return (
     <section className="w-full py-12 md:py-24 bg-black/50">
-      <div className="container px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12">
         <motion.div 
           className="flex flex-col items-center gap-4 text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}

@@ -19,16 +19,34 @@ export function FeaturesSectionWithBentoGrid() {
       <div className="container mx-auto px-6 lg:px-12">
 
         <div className="px-8">
-          <h4 className="text-4xl lg:text-6xl lg:leading-tight mx-auto text-center tracking-tight font-bold header-text-glow mb-6">
+          <motion.h4
+            className="text-4xl lg:text-6xl lg:leading-tight mx-auto text-center tracking-tight font-bold header-text-glow mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             What We Do
-          </h4>
+          </motion.h4>
 
-          <p className="text-base lg:text-lg max-w-2xl mx-auto text-center font-medium">
+          <motion.p
+            className="text-base lg:text-lg max-w-2xl mx-auto text-center font-medium"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             Empowering the next generation of longevity researchers and entrepreneurs
-          </p>
+          </motion.p>
 
           {/* voting new button */}
-          <div className="mt-6 flex justify-center">
+          <motion.div
+            className="mt-6 flex justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <Link
               href="https://atom-meteoroid-b7d.notion.site/2a533e38a36f8036b52bf30ad96dfcd2?pvs=105"
               target="_blank"
@@ -41,7 +59,7 @@ export function FeaturesSectionWithBentoGrid() {
                 What would you like to attend? Vote here!
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
 
         <div className="relative mt-20">
@@ -50,24 +68,28 @@ export function FeaturesSectionWithBentoGrid() {
               title="Workshops"
               description="Hands-on learning sessions with leading researchers."
               skeleton={<SkeletonOne />}
+              index={0}
             />
 
             <BentoCard
               title="Speaker Events"
               description="Talks from pioneers in longevity, AI, and biotechnology."
               skeleton={<SkeletonTwo />}
+              index={1}
             />
 
             <BentoCard
               title="Journal Clubs"
               description="Deep dives into the latest research with peers."
               skeleton={<SkeletonThree />}
+              index={2}
             />
 
             <BentoCard
               title="Community Events"
               description="Build relationships with people shaping the future of health."
               skeleton={<SkeletonFour />}
+              index={3}
             />
           </div>
         </div>
@@ -80,18 +102,21 @@ function BentoCard({
   title,
   description,
   skeleton,
+  index,
 }: {
   title: string;
   description: string;
   skeleton: React.ReactNode;
+  index: number;
 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="group relative overflow-hidden rounded-3xl bg-black/40 border border-white/10 backdrop-blur-xl p-6 hover:bg-black/60 transition"
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ y: -5 }}
+      className="group relative overflow-hidden rounded-3xl bg-black/40 border border-white/10 backdrop-blur-xl p-6 hover:bg-black/60 hover:border-white/20 transition-all duration-300"
     >
       <div className="h-40 mb-4 rounded-xl overflow-hidden">
         {skeleton}

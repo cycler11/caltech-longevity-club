@@ -14,7 +14,7 @@ export const events: Event[] = [
       social: { twitter: "https://x.com/caltechlongevity" },
       photo: "/events/Caltech Longevity Hackathon.avif"
     }],
-    url: "https://lu.ma/caltech-longevity-hackaton"
+    url: "https://luma.com/uqeiu09a"
   },
 
   {

@@ -11,12 +11,11 @@ import { SponsorFormDialog } from "@/components/forms/sponsor-form-dialog";
 
 export function WhoWeAreSection() {
   return (
-    <section className="w-full">
+    <section className="w-full py-12 md:py-24">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12">
         <h1 className="bg-gradient-to-br from-[hsl(var(--orange-bright))] to-[hsl(var(--orange-deep))] py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
           Who We&apos;re Looking For
         </h1>
-
-      <div className="container px-4 md:px-6">
         <motion.div 
           className="flex flex-col items-center gap-4 text-center mb-12"
           initial={{ opacity: 0, y: 20 }}

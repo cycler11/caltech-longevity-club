@@ -74,11 +74,11 @@ export function NavBar({ items, className }: NavBarProps) {
               )}
             >
               <Icon size={18} strokeWidth={2} />
-              {(item.isCTA || !isMobile) && (
-                <span className="hidden md:inline">{item.name}</span>
+              {!isMobile && (
+                <span>{item.name}</span>
               )}
-              {(item.isCTA) && (
-                <span className="md:hidden">{item.name}</span>
+              {isMobile && item.isCTA && (
+                <span>{item.name}</span>
               )}
               {isActive && (
                 <motion.div
